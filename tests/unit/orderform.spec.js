@@ -122,6 +122,19 @@ describe('Product Order Form Testing', () => {
 
     })
 
+    test('Check user allowed to submit form', async() => {
+        await wrapper.setData({
+            product: {
+                name: 'shan',
+                quantity: '8'
+            }
+        })
+        const submitButton = wrapper.find('#submit')
+        await submitButton.trigger('click')
+
+        expect(wrapper.vm.$v.$invalid).toBe(false)
+    })
+
     test('Empty the order form when click clear button', async () => {
 
         await wrapper.setData({
