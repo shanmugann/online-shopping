@@ -22,5 +22,8 @@ npm run test:unit
 
 ### Run PWA
 ```
-npm run build && npx http-server dist
+npm run build
+
+npx http-server dist
+
 ```
