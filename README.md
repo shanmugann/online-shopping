@@ -20,7 +20,7 @@ npm run build
 npm run test:unit
 ```
 
-### PWA
-
+### Run PWA
+```
 npm run build && npx http-server dist
-
+```
